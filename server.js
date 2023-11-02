@@ -14,6 +14,9 @@ const dbURI = process.env.DB;
 app.use(cors())
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+  res.send("Welcome")
+})
 app.use("/user/api",UserRouter)
 app.use("/api",BlogRouter)
 
